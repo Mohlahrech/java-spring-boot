@@ -64,6 +64,6 @@ class ProductControllerTest {
                 .andExpect(status().isNotFound())
                 .andExpect(jsonPath("$.status", is(404)))
                 .andExpect(jsonPath("$.title", is("Product Not Found")))
-                .andExpect(jsonPath("$.detail", is("Product with code " + code + " not found")));
+                .andExpect(jsonPath("$.detail", is("Product not found " + code)));
     }
 }
